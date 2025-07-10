@@ -1,0 +1,215 @@
+/* font imports */
+
+@import url('https://fonts.cdnfonts.com/css/copperplate-gothic-light');
+@import url('https://fonts.cdnfonts.com/css/chewy');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* colours and fonts */
+
+:root {
+    /* colours */
+    --background: linear-gradient(45deg, #25009c, #0074dd, #00d0ff, #00fff2);
+    --dark-blue: #000840;
+    --light-blue: #1cd2ff;
+    --very-light-blue: #c7f4ff;
+
+    /* font family */
+    --font-family: 'Lato', Helvetica, sans-serif;
+    --font-heading: 'Chewy', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--dark-blue);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* body height and main flex-grow ensures footer stays at bottom of page */
+
+main {
+    flex-grow: 1;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    text-decoration: double underline;
+    text-align: center;
+    padding: 7px;
+    margin: 10px auto 15px;
+}
+
+blockquote p {
+    text-align: right;
+    margin: 10px 15px;
+    font-size: 1.1rem;
+}
+
+blockquote p cite {
+    font-size: 1rem;
+}
+
+blockquote p cite a {
+    color: var(--dark-blue);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+blockquote .quote::before {
+    content: '" '
+}
+
+blockquote .quote::after {
+    content: ' "'
+}
+
+hr {
+    border: 1.2px solid var(--dark-blue);
+    width: 100%;
+    margin: 10px auto;
+}
+
+details {
+    margin: 20px 10px;
+    text-align: center;
+    background-color: var(--very-light-blue);
+    padding: 5px;
+    max-width: 420px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+}
+
+summary {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.palindrome-meaning {
+    font-size: 1.1rem;
+    margin: 8px;
+    line-height: 1.5
+}
+
+#checker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: double underline;
+    text-align: center;
+}
+
+/* text input */
+
+#textbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+#text-input {
+    height: 26px;
+    min-width: 250px;
+    padding: 6px;
+    background-color: var(--very-light-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 4px;
+    color: var(--dark-blue);
+    font-size: 0.92rem
+}
+
+#text-input:focus {
+    border: 1px solid var(--dark-blue);
+}
+
+button {
+    background-color: var(--dark-blue);
+    color: var(--very-light-blue);
+    height: 26px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 60px;
+    cursor: pointer;
+}
+
+/* result container kept hidden until js displays answer */
+
+#result-container {
+    background-color: var(--very-light-blue);
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border: 2px solid;
+    border-radius: 5px;
+    margin: 40px 10px 10px;
+    display: none;
+}
+
+footer {
+    color: var(--light-blue);
+    text-align: center;
+    padding: 12px;
+    border-top: 2px solid;
+    font-size: 0.9rem;
+}
+
+/* media queries for smaller screens */
+
+@media (max-width: 480px) {
+    label {
+        margin: 15px 5px 25px;
+    }
+
+    #text-input {
+        max-width: 250px;
+		height: 35px;
+    }
+
+	button {
+		height: 35px;
+	}
+}
+
+@media (max-width: 380px) {
+	#textbox-container {
+		flex-direction: column;
+	}
+	
+	button {
+		margin-top: 20px;
+	}
+	
+	#result-container {
+		margin-top: 10px;
+	}
+}
