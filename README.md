@@ -6,7 +6,7 @@ This is the first project from freeCodeCamp's **JavaScript Algorithms and Data S
 
 ## Features
 
-- Removes special characters, punctuation, and spaces using regex
+- Removes special characters, punctuation, and spaces using regular expressions (regex)
 - Checks if the user input is the same backwards
 - Displays results dynamically
 
