@@ -16,4 +16,4 @@ This is the first project from freeCodeCamp's **JavaScript Algorithms and Data S
 
 ---
 
-Created by `<lexiCodes/>`
+Created by [`<lexiCodes/>`](https://github.com/nihilistic-lex)
